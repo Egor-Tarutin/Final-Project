@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <img src="{{ image_path }}" width="256">
+    <img src="{{ inp_mask_path }}" width="256">
+    <!--img src="{{ mask_path }}" onclick="storeCoords(event)"-->
+    <!--input type="text" id="prompt_field"-->
+    <!--button onclick="sendData()">PROCEED</button-->
+    <img src="{{ gen_image_path }}" width="256">
+    <!--
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script>
+        let coords = {x: null, y: null}
+
+        function storeCoords(event) {
+            coords.x = event.offsetX;
+            coords.y = event.offsetY;
+        }
+
+        function sendData() {
+            let text = document.getElementById('prompt_field').value;
+
+            $.ajax({
+                url: '{% url "gen_view" %}',
+                type: 'POST',
+                data: {
+                    'text': text,
+                    'x': coords.x,
+                    'y': coords.y,
+                    'image_path': '{{ image_path }}',
+                    'mask_path': '{{ mask_path }}',
+                },
+                success: function(response) {
+                    // Update the client side with the new template
+                    document.write(response);
+                }
+            });
+        }
+    </script>
+    -->
+</body>
+</html>
