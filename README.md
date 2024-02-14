@@ -49,12 +49,6 @@ And run command:
 python managa.py runserver
 ```
 
-## Examples
-
-![alt text](1.jpg)
-![alt text](2.jpg)
-![alt text](3.jpg)
-
 ## References
 - [BiSeNet](https://github.com/CoinCheung/BiSeNet)
 - [face-parsing.PyTorch](https://github.com/zllrunning/face-parsing.PyTorch)
